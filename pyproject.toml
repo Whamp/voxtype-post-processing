@@ -1,0 +1,25 @@
+[project]
+name = "voxtype-post-processing"
+version = "0.1.0"
+description = "Minimal Accurate Repair for Voxtype post-processing"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "PyYAML>=6.0.2",
+]
+
+[project.scripts]
+voxtype-post-process = "voxtype_post_processing.cli:main"
+
+[dependency-groups]
+dev = [
+  "pytest>=8.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
